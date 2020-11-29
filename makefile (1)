@@ -1,0 +1,17 @@
+CC = gcc
+OBJC = arrays.o functions.o PictureManipulation.o NumberGame.o Main.o
+EXEC = Main
+DEBUG_FLAG =# assing -g for debug
+COMP_FLAG = 	-STD=C99 -wALL -Werror $(DEBUG)
+
+$(EXEC) : $(OBJS)
+	$(CC) $(OBJS) -O $@
+
+arrays.o: arrays.c arrays.h functions.h
+functions.o: functions.c functions.h arrays.h
+Main.o: Main.c PictureManipulation.h NumberGame.h functions.h arrays.h
+NumberGame.o: NumberGame.c NumberGame.h functions.h arrays.h
+PictureManipulation.o: PictureManipulation.c PictureManipulation.h arrays.h functions.h
+
+clean:
+	rm -f $(OBJC) $(EXEC)
