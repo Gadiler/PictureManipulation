@@ -15,7 +15,7 @@ and if 4×4 tiles, the puzzle is called the 15-puzzle or 16-puzzle named, respec
 The object of the puzzle is to place the tiles in order by making sliding moves that use the empty space.
 
 ### Picture Manipulation:
-### Clockwise exemple:	
+#### Clockwise exemple:	
 		|1|2|3|      |7|4|1|
 		|4|5|6|  ->  |8|5|2|
 		|7|8|9|      |9|6|3|
